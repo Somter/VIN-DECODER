@@ -1,0 +1,38 @@
+.vin-results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .vin-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.vin-results__card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vin-results__variable {
+  color: #999999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 4px 0px 0px 0px;
+}
+
+.vin-results__value {
+  color: #1a1a1a;
+  font-size: 15px;
+  letter-spacing: 1.2;
+  font-weight: 600;
+  margin: 4px 0px 0px 0px;
+}

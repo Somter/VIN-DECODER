@@ -1,0 +1,42 @@
+.search-history__list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0px 0px 0px;
+}
+
+.search-history__button {
+  background-color: #ffffff;
+  padding: 7px 10px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.search-history__button:hover {
+  border: 1px solid #000000;
+}
+
+.search-history__title {
+  color: #999999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.search-history {
+  margin: 40px 0px 0px 0px;
+}
+
+.search-history__icon {
+  width: 12px;
+  height: 12px;
+}
+
+.search-history__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
