@@ -11,3 +11,18 @@ export interface VinData {
     SearchCriteria: string;
     Results: VinVariable[];
 }
+
+export interface FullVariable {
+    DataType: string;
+    Description: string;
+    GroupName: string;
+    ID: number;
+    Name: string;
+}
+
+export interface VariableData {
+    Count: number;
+    Message: string;
+    SearchCriteria: string | null;
+    Results: FullVariable[];
+}

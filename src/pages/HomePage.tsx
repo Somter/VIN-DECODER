@@ -6,6 +6,7 @@ import { type VinData } from '../api/types';
 import VinForm from '../components/VinForm/VinForm';
 import VinResultList from '../components/VunResultList/VinResultList';
 import SearchHistory from '../components/SearchHistory/SearchHistory';
+import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
     const [vinData, setVinData] = useState<VinData | null>(null);
@@ -62,7 +63,9 @@ const HomePage: React.FC = () => {
                             <h2 className="home-wrapper__specs-title">Vehicle Specifications</h2>
 
                             {vinData && (
-                                <button className="home-wrapper__view-all">View all variables</button>
+                                <Link to="/variables" className="home-wrapper__view-all">
+                                    View all variables
+                                </Link>
                             )}
                         </div>
                     )}
