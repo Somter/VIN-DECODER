@@ -10,40 +10,48 @@ import { Link } from 'react-router-dom';
 
 
 const VariablesPage: React.FC = () => {
-    const [variableData, setVariableData] = useState<VariableData | null>(null)
+    const [variableData, setVariableData] = useState<VariableData | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const loadData = async () => {
-            const data = await fetchVariableDataApi();
-            setVariableData(data);
-        }
+            try {
+                setIsLoading(true);
+                setError(null);
+                const data = await fetchVariableDataApi();
+                setVariableData(data);
+            } catch (err) {
+                console.error("Fetch error:", err);
+                setError("Failed to load variables. Please try again later.");
+            } finally {
+                setIsLoading(false);
+            }
+        };
         loadData();
-    }, [])
-
+    }, []);
 
     return (
-        <>
-            <main className='variables-wrapper'>
-                <Link to="/" className="variables-wrapper__back-link">
-                    <img className='variables-wrapper__back-icon' src={LeftIcon} alt="" />
-                    <span>Back to Decoder</span>
-                </Link>
+        <main className='variables-wrapper'>
+            <Link to="/" className="variables-wrapper__back-link">
+                <img className='variables-wrapper__back-icon' src={LeftIcon} alt="" />
+                <span>Back to Decoder</span>
+            </Link>
 
-                <div className='variables-wrapper__header'>
-                    <img src={BookIcon} alt="" className='variables-wrapper__icon' />
-                    <h1 className="variables-wrapper__title">Vehicle Variables</h1>
-                </div>
+            <div className='variables-wrapper__header'>
+                <img src={BookIcon} alt="" className='variables-wrapper__icon' />
+                <h1 className="variables-wrapper__title">Vehicle Variables</h1>
+            </div>
 
-                {variableData ? (
-                    <VariableList results={variableData.Results} />
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </main>
-
-
-        </>
-    )
+            {error ? (
+                <div className="error-message">{error}</div>
+            ) : isLoading ? (
+                <p>Loading...</p>
+            ) : (
+                variableData && <VariableList results={variableData.Results} />
+            )}
+        </main>
+    );
 }
 
 export default VariablesPage;
