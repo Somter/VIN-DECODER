@@ -1,3 +1,8 @@
+.home-wrapper {
+  max-width: 823px;
+  margin: 0 auto;
+}
+
 .home-wrapper__subtitle {
   color: #555;
   font-style: italic;
@@ -9,12 +14,7 @@
 
 .home-wrapper__title {
   text-align: center;
-}
-
-.home-wrapper {
-  max-width: 823px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .home-wrapper__specs-header {
@@ -36,19 +36,4 @@
   font-weight: 700;
   color: #2d3748;
   flex: 1;
-}
-
-.home-wrapper__view-all {
-  text-decoration: none;
-  color: #999999;
-  font-size: 14px;
-  font-weight: 400;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-}
-
-.home-wrapper__view-all:hover {
-  color: #444444;
-  border-bottom-color: #444444;
 }

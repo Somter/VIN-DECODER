@@ -33,7 +33,7 @@ const VariablesPage: React.FC = () => {
 
     return (
         <main className='variables-wrapper'>
-            <Link to="/" className="variables-wrapper__back-link">
+            <Link to="/" className="secondary-link">
                 <img className='variables-wrapper__back-icon' src={LeftIcon} alt="" />
                 <span>Back to Decoder</span>
             </Link>
@@ -44,7 +44,7 @@ const VariablesPage: React.FC = () => {
             </div>
 
             {error ? (
-                <div className="error-message">{error}</div>
+                <div className="error-message-globa">{error}</div>
             ) : isLoading ? (
                 <p>Loading...</p>
             ) : (

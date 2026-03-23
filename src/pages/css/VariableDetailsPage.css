@@ -1,0 +1,30 @@
+.variable-details {
+  max-width: 823px;
+  margin: 100px auto 50px;
+  padding: 0 20px;
+}
+
+.variable-details .secondary-link {
+  margin-bottom: 32px;
+}
+
+.variables-wrapper__back-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.text-overline {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.variable-details__name {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.1;
+  margin-bottom: 44px;
+  letter-spacing: -0.02em;
+}

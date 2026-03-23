@@ -29,6 +29,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.variable-results__card:hover {
+  text-decoration: none;
 }
 
 .variable-results__title {
@@ -44,4 +50,3 @@
   padding: 3px 9px 3px 9px;
   border-radius: 4px;
 }
-
