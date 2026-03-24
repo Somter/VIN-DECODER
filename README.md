@@ -2,7 +2,7 @@
 
 A minimalistic, responsive Single Page Application (SPA) built with React and TypeScript for decoding Vehicle Identification Numbers (VIN) using the public NHTSA API.
 
-**[Live Demo](https://vin-decoder-1gcvcmju6-alexandershevt-6649s-projects.vercel.app/)**
+**[Live Demo](https://vin-decoder-red.vercel.app/)**
 
 ## Project Overview
 
