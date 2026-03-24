@@ -1,0 +1,31 @@
+.footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 60px 20px;
+  margin-top: auto;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer__title {
+  font-weight: 800;
+  color: #a5a5a5;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer__subtitle {
+  color: #a0aec0;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
