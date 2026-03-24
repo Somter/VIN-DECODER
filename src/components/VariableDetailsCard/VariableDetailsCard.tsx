@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { type FullVariable } from '../../api/types';
-import LeftIcon from '../../assets/arrow-left_icon.svg';
 import './VariableDetailsCard.css';
 
 interface VariableDetailsCardProps {
